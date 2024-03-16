@@ -328,13 +328,6 @@ footer > p {
 
 /* Formulario */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
 section {
     display: flex;
     align-items: center;
@@ -342,11 +335,16 @@ section {
     flex-direction: column;
     padding: 10px 45px;
     background: var(--cor4);
+    /*width: 500px;*/
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: 5px;
 }
 
 section legend {
+    color: white;
+}
+
+section p {
     color: white;
 }
 
@@ -408,40 +406,5 @@ form button {
 form button:hover {
     background: white;
     color: black;
-    border-radius: 16px;
-}
-
-/*Página do Obrigada*/
-
-.main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: black;
-    flex-direction: column;
-}
-
-.text {
-    font-size: 45px;
-    color: white;
-    margin-bottom: 30px;
-}
-
-.paragrafo {
-    color: white;
-    margin-bottom: 50px;
-}
-
-.btn {
-    padding: 15px 55px;
-    background: white;
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    transition: all 0.5s;
-}
-
-.btn:hover {
     border-radius: 16px;
 }

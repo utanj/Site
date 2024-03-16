@@ -31,11 +31,13 @@
                     <h1>Contacto</h1>
                     <form action="registo.php" method="post">
                         <label for="inome">Nome Completo</label>
-                        <input type="text" name="name" placeholder="Nome completo" autocomplete="off">
+                        <input type="text" name="nome" id="inome" placeholder="Nome completo" minlength="5" maxlength="30" required>
                         <label for="iemail">Email</label>
-                        <input type="email" name="email" placeholder="email" autocomplete="off">
-                        <label for="itelefone">Telefone</label>
-                        <input type="telefone" name="telefone" placeholder="(xx) xxxx-xxxx" autocomplete="off" required>
+                        <input type="email" name="email" placeholder="utilizador@email.com" autocomplete="off" required>
+                        <!--<label for="itelefone">Telefone</label>
+                        <input type="telefone" name="telefone" placeholder="(xx) xxxx-xxxx" autocomplete="off" required>-->
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" class="input-padrao" required placeholder="(xx) xxxxx-xxxx">
                         <fieldset>
                             <br>
                             <legend>Sexo:</legend>
@@ -369,7 +371,16 @@
                             </p>
                         </fieldset>
                         <br>
+                        <fieldset>
+                            <p>
+                                <label for="ifile">Foto de um gastronomia do seu país:</label>
+                                <input type="file" name="file" id="ifile" accept=".jpg, .jpeg, .png, .gif, image/jpeg, image/png, image/gif" multiple>
+                            </p>
+                        </fieldset>
+                        <br>
                         <label for="imsg">O que é diferente no seu país?</label>
+                        <textarea name="massage" id="imsg" cols="30" rows="10" placeholder="partilhe a sua resposta"></textarea>
+                        <label for="imsg">O que gosta mais da Índia?</label>
                         <textarea name="massage" id="imsg" cols="30" rows="10" placeholder="partilhe a sua resposta"></textarea>
                         <label for="imsg">Mensagem</label>
                         <textarea name="massage" id="imsg" cols="30" rows="10" placeholder="partilhe a sua resposta"></textarea>
