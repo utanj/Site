@@ -335,9 +335,9 @@ section {
     flex-direction: column;
     padding: 10px 45px;
     background: var(--cor4);
-    /*width: 500px;*/
+    /*width: 700px;*/
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
 }
 
 section legend {
@@ -345,6 +345,10 @@ section legend {
 }
 
 section p {
+    color: white;
+}
+
+section span {
     color: white;
 }
 

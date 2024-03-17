@@ -34,8 +34,6 @@
                         <input type="text" name="nome" id="inome" placeholder="Nome completo" minlength="5" maxlength="30" required>
                         <label for="iemail">Email</label>
                         <input type="email" name="email" placeholder="utilizador@email.com" autocomplete="off" required>
-                        <!--<label for="itelefone">Telefone</label>
-                        <input type="telefone" name="telefone" placeholder="(xx) xxxx-xxxx" autocomplete="off" required>-->
                         <label for="telefone">Telefone</label>
                         <input type="tel" id="telefone" class="input-padrao" required placeholder="(xx) xxxxx-xxxx">
                         <fieldset>
@@ -49,6 +47,19 @@
                             <br>
                                 <input type="radio" id="ioutro" name="genero" value="outro">
                                 <label for="outro">Outro</label>
+                        </fieldset>
+                        <br>
+                        <fieldset>
+                            <br>
+                            <legend>Qual sua idade?</legend>
+                                <input type="radio" id="iidade" name="idade" value="18_22" checked>
+                                <label for="idade">18 a 22</label>
+                            <br>
+                                <input type="radio" id="iidade" name="idade" value="23_30">
+                                <label for="idade"> 23 a 30</label>
+                            <br>
+                                <input type="radio" id="iidade" name="idade" value="mais31">
+                                <label for="idade">acima de 31</label>
                         </fieldset>
                         <br>
                         <fieldset>
@@ -295,6 +306,7 @@
                             <p>
                                 <label for="iling">Linguagem</label>
                                 <select data-placeholder="Choose a Language...">
+                                    <option value="">Língua</option>
                                     <option value="AF">Afrikaans</option>
                                     <option value="SQ">Albanian</option>
                                     <option value="AR">Arabic</option>
@@ -370,19 +382,59 @@
                                   </select>
                             </p>
                         </fieldset>
-                        <br>
+                        <!--<br>
                         <fieldset>
                             <p>
                                 <label for="ifile">Foto de um gastronomia do seu país:</label>
                                 <input type="file" name="file" id="ifile" accept=".jpg, .jpeg, .png, .gif, image/jpeg, image/png, image/gif" multiple>
                             </p>
+                        </fieldset>-->
+                        <br>
+                        <fieldset>
+                            <br>
+                            <legend>Foto de um gastronomia do seu país:</legend>
+                            <input type="file" name="file" id="ifile" accept=".jpg, .jpeg, .png, .gif, image/jpeg, image/png, image/gif" multiple>
                         </fieldset>
                         <br>
                         <label for="imsg">O que é diferente no seu país?</label>
                         <textarea name="massage" id="imsg" cols="30" rows="10" placeholder="partilhe a sua resposta"></textarea>
                         <label for="imsg">O que gosta mais da Índia?</label>
                         <textarea name="massage" id="imsg" cols="30" rows="10" placeholder="partilhe a sua resposta"></textarea>
-                        <label for="imsg">Mensagem</label>
+                        <fieldset>
+                            <p>
+                                <legend>Você gosta do seu país?</legend>
+                                <select name="sim or nao" id="isim ou inao">
+                                    <option value="" select>Escolha um opção</option>
+                                            <option value="sim">Sim</option>
+                                            <option value="nao">Não</option>
+                                </select>
+                            </p>
+                        </fieldset>
+                        <br>
+                        <label for="imsg">Porque gosta do seu país?</label>
+                        <textarea name="massage" id="imsg" cols="30" rows="10" placeholder="partilhe a sua resposta"></textarea>
+                        <!--<label for="imsg">Como é que é nível de comunidade no seu país?</label>
+                        <textarea name="massage" id="imsg" cols="30" rows="10" placeholder="partilhe a sua resposta"></textarea>-->
+                        <fieldset>
+                            <p>
+                                <label for="irange">Como é que é nível de comunidade no seu país?</label>
+                                <input type="range" name="range" id="irange" value="3" min="1" max="100" step="1" oninput="inivel.innerHTML=Number(irange.value)">
+                                <output name="nivel" id="inivel">3</output>
+                            </p>
+                        </fieldset>
+                        <br>
+                        <fieldset>
+                            <div class="field radiobox">
+                                <span>Você já visitou a Índia?</span>
+                                <input type="radio" name="novidades" id="sim" value="sim" checked><label for="sim">Sim</label>
+                                <input type="radio" name="novidades" id="nao" value="nao"><label for="nao">Não</label>
+                                <input type="radio" name="novidades" id="outro" value="outro"><label for="outro">Outro</label>
+                            </div>
+                        </fieldset>
+                        <br>
+                        <label for="imsg">Se escolheu outro no opção anterior, escreve o nome do país aqui.</label>
+                        <input type="text" name="msg" id="imdg" placeholder="nome do país">
+                        <label for="imsg">Mensagem final</label>
                         <textarea name="massage" id="imsg" cols="30" rows="10" placeholder="partilhe a sua resposta"></textarea>
                         <button type="submit">Enviar</button>
                     </form>
